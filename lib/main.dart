@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skillconnect/login_page.dart';
+import 'package:skillconnect/features/auth/presentation/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Skill Connect",
       debugShowCheckedModeBanner: true,
-      home:LoginPage() ,
+      home:LoginScreen() ,
     );
   }
 }
