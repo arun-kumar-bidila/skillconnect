@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:skillconnect/config/routes/go_router_config.dart';
 import 'package:skillconnect/config/theme/app_theme.dart';
 import 'package:skillconnect/features/auth/presentation/screens/login_screen.dart';
-import 'package:skillconnect/features/auth/presentation/screens/signup_screen.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -12,11 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: "Skill Connect",
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
-      home:LoginScreen() ,
+      // home:LoginScreen() ,
+      routerConfig: GoRouterConfig.router,
     );
   }
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skillconnect/config/constants/assets_manager.dart';
+import 'package:skillconnect/config/routes/app_routes.dart';
 import 'package:skillconnect/config/theme/app_colors.dart';
 import 'package:skillconnect/features/common/custom_button.dart';
 import 'package:skillconnect/features/common/custom_text_field.dart';
@@ -55,9 +57,10 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "Create One",
-                    recognizer: TapGestureRecognizer()..onTap = () {
-
-                    },
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        context.go(AppRoutes.signup);
+                      },
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       color: AppColors.kAccentCyan,
                       fontWeight: FontWeight.bold,

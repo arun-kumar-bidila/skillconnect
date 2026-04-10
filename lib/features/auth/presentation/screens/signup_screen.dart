@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skillconnect/config/constants/assets_manager.dart';
+import 'package:skillconnect/config/routes/app_routes.dart';
 import 'package:skillconnect/config/theme/app_colors.dart';
 import 'package:skillconnect/features/common/custom_button.dart';
 import 'package:skillconnect/features/common/custom_text_field.dart';
@@ -50,23 +53,26 @@ class _SignupScreenState extends State<SignupScreen> {
               buttonLabel: "Continue",
               buttonLeadingIcon: Icons.person,
             ),
-             SizedBox(height: 24),
-             RichText(
+            SizedBox(height: 24),
+            RichText(
               text: TextSpan(
                 text: "Already have an account?  ",
                 style: Theme.of(context).textTheme.bodySmall,
                 children: [
                   TextSpan(
                     text: "Login",
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        context.go(AppRoutes.login);
+                      },
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       color: AppColors.kAccentCyan,
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
             ),
-           
           ],
         ),
       ),

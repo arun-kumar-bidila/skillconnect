@@ -17,11 +17,8 @@ class CustomTextField extends StatelessWidget {
     return Container(
       width: .infinity,
       decoration: BoxDecoration(
-        border: Border.all(
-          color: AppColors.kTextFieldBorderColor,
-          width: 1.5
-        ),
-        borderRadius: BorderRadius.circular(16)
+        border: Border.all(color: AppColors.kTextFieldBorderColor, width: 1.5),
+        borderRadius: BorderRadius.circular(16),
       ),
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Row(
@@ -31,12 +28,11 @@ class CustomTextField extends StatelessWidget {
             size: 24,
             color: AppColors.kTextFieldLeadingIconColor,
           ),
-         
 
           Expanded(
             child: TextFormField(
               decoration: InputDecoration(
-                contentPadding:.symmetric(horizontal: 16) ,
+                contentPadding: .symmetric(horizontal: 16),
                 border: InputBorder.none,
                 enabledBorder: InputBorder.none,
                 errorBorder: InputBorder.none,
@@ -45,8 +41,7 @@ class CustomTextField extends StatelessWidget {
                 hintStyle: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  color: AppColors.kLightGray
-                  ,
+                  color: AppColors.kLightGray,
                 ),
               ),
             ),
