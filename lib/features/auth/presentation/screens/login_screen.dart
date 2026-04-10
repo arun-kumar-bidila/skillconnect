@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:skillconnect/config/constants/assets_manager.dart';
 import 'package:skillconnect/config/routes/app_routes.dart';
 import 'package:skillconnect/config/theme/app_colors.dart';
+import 'package:skillconnect/config/theme/app_text_theme.dart';
 import 'package:skillconnect/features/common/custom_button.dart';
 import 'package:skillconnect/features/common/custom_text_field.dart';
 
@@ -20,20 +21,20 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: .center,
 
           children: [
-            Image.asset(AssetsManager.appLogoLarge, width: 100),
+            Image.asset(AssetsManager.appLogoLarge, width: 150),
             SizedBox(height: 24),
             Text(
               "Login Here",
               style: Theme.of(
                 context,
-              ).textTheme.titleLarge!.copyWith(color: AppColors.kPrimaryBlue),
+              ).textTheme.titleLarge!.copyWith(color: AppColors.kPrimaryBlue,),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 24),
             Text(
               "Login to explore more from the skill connect !",
               style: Theme.of(context).textTheme.bodySmall,
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 24),
             CustomTextField(
               hintText: "Enter Email",
               leadingIcon: CupertinoIcons.mail_solid,
@@ -46,7 +47,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 24),
             CustomButton(
               buttonLabel: "Continue",
-              buttonLeadingIcon: Icons.person,
+              buttonTrailingIcon: Icons.arrow_forward_rounded,
             ),
             SizedBox(height: 24),
 

@@ -25,7 +25,7 @@ class _SignupScreenState extends State<SignupScreen> {
           mainAxisAlignment: .center,
 
           children: [
-            Image.asset(AssetsManager.appLogoLarge, width: 100),
+            Image.asset(AssetsManager.appLogoLarge, width: 150),
             SizedBox(height: 24),
             Text(
               "Create Account",
@@ -40,6 +40,11 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
             SizedBox(height: 32),
             CustomTextField(
+              hintText: "Enter Full Name",
+              leadingIcon: CupertinoIcons.person,
+            ),
+            SizedBox(height: 24),
+            CustomTextField(
               hintText: "Enter Email",
               leadingIcon: CupertinoIcons.mail_solid,
             ),
@@ -51,7 +56,7 @@ class _SignupScreenState extends State<SignupScreen> {
             SizedBox(height: 24),
             CustomButton(
               buttonLabel: "Continue",
-              buttonLeadingIcon: Icons.person,
+              buttonTrailingIcon: Icons.arrow_forward_rounded,
             ),
             SizedBox(height: 24),
             RichText(

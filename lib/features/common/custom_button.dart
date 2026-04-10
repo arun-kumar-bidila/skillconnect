@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:skillconnect/config/theme/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
-  final IconData buttonLeadingIcon;
+  final IconData? buttonLeadingIcon;
   final String buttonLabel;
+  final IconData? buttonTrailingIcon;
   const CustomButton({
     super.key,
     required this.buttonLabel,
-    required this.buttonLeadingIcon,
+    this.buttonLeadingIcon,
+    this.buttonTrailingIcon,
   });
 
   @override
@@ -22,15 +24,21 @@ class CustomButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: .center,
         children: [
-          Icon(buttonLeadingIcon, size: 24, color: Colors.white),
-          SizedBox(width: 8),
+          if (buttonLeadingIcon != null) ...[
+            Icon(buttonLeadingIcon, size: 24, color: Colors.white),
+            SizedBox(width: 8),
+          ],
+
           Text(
             buttonLabel,
             style: Theme.of(
               context,
             ).textTheme.labelLarge!.copyWith(color: AppColors.kWhiteColor),
           ),
-           SizedBox(width:24 ,)
+          if (buttonTrailingIcon != null) ...[
+            SizedBox(width: 8),
+            Icon(buttonTrailingIcon, size: 24, color: Colors.white),
+          ],
         ],
       ),
     );
