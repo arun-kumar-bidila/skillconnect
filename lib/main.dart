@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skillconnect/config/theme/app_theme.dart';
 import 'package:skillconnect/features/auth/presentation/screens/login_screen.dart';
+import 'package:skillconnect/features/auth/presentation/screens/signup_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Skill Connect",
       debugShowCheckedModeBanner: true,
       theme: AppTheme.appTheme,
-      home:LoginScreen() ,
+      home:SignupScreen() ,
     );
   }
 }
