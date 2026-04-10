@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Skill Connect",
       debugShowCheckedModeBanner: true,
       theme: AppTheme.appTheme,
-      home:SignupScreen() ,
+      home:LoginScreen() ,
     );
   }
 }

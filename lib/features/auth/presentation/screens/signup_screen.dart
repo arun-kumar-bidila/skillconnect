@@ -50,6 +50,22 @@ class _SignupScreenState extends State<SignupScreen> {
               buttonLabel: "Continue",
               buttonLeadingIcon: Icons.person,
             ),
+             SizedBox(height: 24),
+             RichText(
+              text: TextSpan(
+                text: "Already have an account?  ",
+                style: Theme.of(context).textTheme.bodySmall,
+                children: [
+                  TextSpan(
+                    text: "Login",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: AppColors.kAccentCyan,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ],
+              ),
+            ),
            
           ],
         ),
